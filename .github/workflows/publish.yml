@@ -10,9 +10,13 @@ jobs:
 
       - name: Install Node.js
         uses: actions/setup-node@v3
+        with:
+          node-version: "latest"
 
       - uses: pnpm/action-setup@v2
         name: Install pnpm
+        with:
+          version: "latest"
 
       - name: Get pnpm store directory
         shell: bash
