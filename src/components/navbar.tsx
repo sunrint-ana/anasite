@@ -7,7 +7,7 @@ import { isMobileOnly } from 'mobile-device-detect';
 export default function NavBar() {
   const {setColorMode, colorMode} = useColorMode();
   return (
-    <div class="flex justify-end flex-row bg-background w-screen sticky h-14 align-middle border-primary border-b-2">
+    <div class="flex justify-end flex-row bg-background w-full sticky h-14 align-middle border-primary border-b-2">
       <div class="my-2 mr-auto flex flex-row">
         <A href="/" class="ml-2">
           <img src="/logo.svg" alt="icon" width={43} />
