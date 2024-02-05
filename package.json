@@ -8,7 +8,7 @@
     "build": "vite build",
     "serve": "vite preview"
   },
-  "license": "MisileLab License",
+  "license": "AGPL-3.0",
   "devDependencies": {
     "autoprefixer": "10.4.17",
     "class-variance-authority": "0.7.0",
