@@ -1,7 +1,6 @@
 import { ColorModeProvider, ColorModeScript } from "@kobalte/core";
 import { Col, Grid } from "./components/ui/grid";
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "./components/ui/card";
-import { LineChart } from "~/components/ui/charts"
 import { createEffect, createSignal, onCleanup } from "solid-js";
 import moment, { Moment } from "moment";
 import { subtractDate } from "./definition";
@@ -69,10 +68,11 @@ export default function About() {
                     <CardTitle class="text-xl md:text-2xl lg:text-3xl">선린 유일의 풀스택 동아리</CardTitle>
                   </CardHeader>
                   <CardContent>
-                    <h1 class="text-lg md:text-xl lg:text-2xl font-normal mb-2 lg:mb-0">연봉으로 나오는 백엔드의 미래</h1>
-                    <LineChart data={chartData} />
-                    <CardFooter class="text-sm lg:text-base text-gray-400">StackOverflow Survey, 단위: $</CardFooter>
-                    <h1 class="text-2xl font-normal">커리큘럼</h1>
+                    <h1 class="text-lg md:text-xl lg:text-2xl font-normal mb-2 lg:mb-0">동아리의 핵심, 소통</h1>
+                    <p>동아리를 갔는데 소통이 되지 않는다면, 있는 의미가 없다고 생각합니다.</p>
+                    <p>그러나 지금 선린의 동아리는 협업이나 소통하는 방식을 가르치지 않습니다.</p>
+                    <p class="text-base lg:text-xl font-semibold">AnA는 협업을 가르칩니다.</p>
+                    <h1 class="text-2xl font-normal mt-2">커리큘럼</h1>
                     <p class="mt-2">시작은 서버의 기본인 리눅스부터,</p>
                     <p>데이터를 저장하는 데이터베이스,</p>
                     <p>백엔드에 사용되는 Python과 Java,</p>
