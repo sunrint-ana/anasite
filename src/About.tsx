@@ -5,6 +5,7 @@ import { createEffect, createSignal, onCleanup } from "solid-js";
 import moment, { Moment } from "moment";
 import { subtractDate } from "./definition";
 import { Button } from "./components/ui/button";
+import { BoldText, SubTitle, Title } from "./components/utils";
 
 export default function About() {
   const [date, setDate] = createSignal(moment().unix());
@@ -65,39 +66,39 @@ export default function About() {
               <Col span={1} spanMd={1}>
                 <Card class="h-full">
                   <CardHeader>
-                    <CardTitle class="text-xl md:text-2xl lg:text-3xl">선린 유일의 풀스택 동아리</CardTitle>
+                    <Title>선린 유일의 풀스택 동아리</Title>
                   </CardHeader>
                   <CardContent>
-                    <h1 class="text-lg md:text-xl lg:text-2xl font-normal mb-2 lg:mb-0">동아리의 핵심, 소통</h1>
+                    <SubTitle class="mb-0 lg:mb-2">동아리의 핵심, 소통</SubTitle>
                     <p>동아리를 갔는데 소통이 되지 않는다면, 있는 의미가 없다고 생각합니다.</p>
                     <p>그러나 지금 선린의 동아리는 협업이나 소통하는 방식을 가르치지 않습니다.</p>
-                    <p class="text-base lg:text-xl font-semibold">AnA는 협업을 가르칩니다.</p>
-                    <h1 class="text-2xl font-normal mt-2">커리큘럼</h1>
+                    <BoldText>AnA는 협업을 가르칩니다.</BoldText>
+                    <SubTitle class="mt-2">커리큘럼</SubTitle>
                     <p class="mt-2">시작은 서버의 기본인 리눅스부터,</p>
                     <p>데이터를 저장하는 데이터베이스,</p>
                     <p>백엔드에 사용되는 Python과 Java,</p>
                     <p>프론트에 거의 많이 사용되는 JavaScript,</p>
                     <p>요즘 뜨고 있는 Rust까지</p>
-                    <p class="text-base lg:text-xl font-semibold">이 모든 걸 AnA에서 배울 수 있습니다.</p>
+                    <BoldText>이 모든 걸 AnA에서 배울 수 있습니다.</BoldText>
                   </CardContent>
                 </Card>
               </Col>
               <Col span={1} spanMd={1}>
                 <Card class="h-full">
                   <CardHeader>
-                    <CardTitle class="text-xl md:text-2xl lg:text-3xl">아이디어부터 프로젝트까지</CardTitle>
+                    <Title>아이디어부터 프로젝트까지</Title>
                   </CardHeader>
                   <CardContent>
-                    <h1 class="text-lg md:text-xl lg:text-2xl font-normal mt-2">아이디어로 완성되는 프로젝트</h1>
+                    <SubTitle>아이디어로 완성되는 프로젝트</SubTitle>
                     <p class="mt-2">좋은 아이디어를 가지고 있다면 AnA에 들어와서 프로젝트를 만들어보세요.</p>
                     <p>동아리 지원비로 지원해드리며, 서류도 대신 작성해드립니다.</p>
                     <p class="text-gray-400">만약 학과에서 거절하면, 사비로 지원해드릴 수도 있습니다.</p>
-                    <h1 class="text-lg md:text-xl lg:text-2xl font-normal mt-2">후배만 배우는 곳이 아닌 동아리</h1>
+                    <SubTitle class="mt-2">후배만 배우는 곳이 아닌 동아리</SubTitle>
                     <p class="mt-2">AnA에서 모르는 것이 있다면 물어봐도 됩니다.</p>
                     <p>AnA는 디스코드와 카카오톡이 존재하며, 꼭 필요한 채팅뿐만 아니라 하고 싶은 말을 하셔도 괜찮습니다.</p>
-                    <h1 class="text-lg md:text-xl lg:text-2xl font-normal mt-2">대회와 연계하는 프로젝트</h1>
+                    <SubTitle class="mt-2">대회와 연계하는 프로젝트</SubTitle>
                     <p class="mt-2">만약에 좋은 아이디어가 있으면, 대회 팀원을 구하여 대회를 나갈 수 있게 도와드릴 생각입니다.</p>
-                    <p class="text-base lg:text-xl font-semibold">AnA는 프로그램이 아이디어로 완성된다고 생각합니다.</p>
+                    <BoldText>AnA는 프로그램이 아이디어로 완성된다고 생각합니다.</BoldText>
                   </CardContent>
                 </Card>
               </Col>
