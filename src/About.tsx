@@ -102,7 +102,7 @@ export default function About() {
                 </Card>
               </Col>
               <Col span={1} spanMd={2} class="mb-20">
-                <Card class="h-full">
+                <Card class="h-fit">
                   <CardHeader>
                     <CardTitle class="text-3xl text-center">AnA 신청 기간</CardTitle>
                   </CardHeader>
