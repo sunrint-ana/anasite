@@ -8,7 +8,7 @@ export function Title(props: { children: JSXE }): JSXE {
 }
 
 export function SubTitle(props: {class?: string, children: JSXE}): JSXE {
-    return <h1 class={`text-lg md:text-xl lg:text-2xl font-normal ${props.class === undefined ? "" : props.class}`}>{props.children}</h1>
+    return <h1 class={`text-lg mb-2 md:mb-0 md:text-xl lg:text-2xl font-normal ${props.class === undefined ? "" : props.class}`}>{props.children}</h1>
 }
 
 export function BoldText(props: {class?: string, children: JSXE}): JSXE {
