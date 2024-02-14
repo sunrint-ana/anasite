@@ -8,9 +8,6 @@ dependencies:
   '@kobalte/core':
     specifier: 0.12.1
     version: 0.12.1(solid-js@1.8.12)
-  '@solidjs/router':
-    specifier: 0.11.3
-    version: 0.11.3(solid-js@1.8.12)
   clsx:
     specifier: 2.1.0
     version: 2.1.0
@@ -907,14 +904,6 @@ packages:
       solid-js: ^1.6.12
     dependencies:
       solid-js: 1.8.12
-
-  /@solidjs/router@0.11.3(solid-js@1.8.12):
-    resolution: {integrity: sha512-clSgyvzNnAw5iwnqHFNdzvvgt1eHbg81hu3A7H/qYz0+J5D0XIk7oqaOI7SRWCTnV8Rg9q4K83VV4foCOb+jcw==}
-    peerDependencies:
-      solid-js: ^1.8.6
-    dependencies:
-      solid-js: 1.8.12
-    dev: false
 
   /@swc/helpers@0.5.6:
     resolution: {integrity: sha512-aYX01Ke9hunpoCexYAgQucEpARGQ5w/cqHFrIR+e9gdKb1QWTsVJuTJ2ozQzIAxLyRQe/m+2RqzkyOOGiMKRQA==}
