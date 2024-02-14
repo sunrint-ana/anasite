@@ -37,24 +37,6 @@ export default function About() {
     }
   })
   onCleanup(() => clearInterval(timer))
-  const chartData = {
-    labels: ["2021", "2022", "2023"],
-    datasets: [
-      {
-        label: "Frontend",
-        data: [49725, 60000, 59970],
-        fill: true
-      }, {
-        label: "Backend",
-        data: [56723, 68355, 76034],
-        fill: true
-      }, {
-        label: "FullStack",
-        data: [56038, 66372, 71140],
-        fill: true
-      }
-    ]
-  };
   return (
     <div>
       <ColorModeScript />
