@@ -90,7 +90,7 @@ export default function About() {
                     <CardTitle class="text-3xl text-center">AnA 신청 기간</CardTitle>
                   </CardHeader>
                   <CardContent class="flex flex-col items-center">
-                    <p class="text-xl font-se">{result()}</p>
+                    <p class="text-xl font-se tabular-nums">{result()}</p>
                     <Button class="text-xs md:text-base mt-4">신청</Button>
                   </CardContent>
                 </Card>
