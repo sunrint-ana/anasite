@@ -2,6 +2,7 @@ import { Button } from "./ui/button";
 import { revt } from "~/definition";
 import { useColorMode } from "@kobalte/core";
 import { isMobileOnly } from 'mobile-device-detect';
+import { Submit } from "./utils";
 
 export default function NavBar() {
   const {setColorMode, colorMode} = useColorMode();
@@ -16,7 +17,7 @@ export default function NavBar() {
       <div class="my-2 ml-auto flex flex-row">
         <div onClick={()=>{setColorMode(revt(colorMode()))}} class="justify-center items-center flex"><img src={`/${colorMode()}/mode.svg`} class="text-primary mr-2" alt={colorMode()} width={30}/></div>
         <Button variant="secondary"><a href="#about">About</a></Button>
-        <Button class="text-xs md:text-base md:ml-2">신청</Button>
+        <Submit class="md:ml-2 md:mr-2 mr-1" />
       </div>
     </div>
   );

@@ -1,5 +1,10 @@
-import { JSX } from "solid-js";
+import { JSX, createEffect, createSignal, onCleanup } from "solid-js";
 import { CardTitle } from "./ui/card";
+import moment from "dayjs";
+import { dateStringEvent, endDate, startDate } from "~/definition";
+import { TooltipTrigger, Tooltip, TooltipContent } from "./ui/tooltip";
+import { As } from "@kobalte/core";
+import { Button } from "./ui/button";
 
 type JSXE = JSX.Element;
 
@@ -13,4 +18,24 @@ export function SubTitle(props: {class?: string, children: JSXE}): JSXE {
 
 export function BoldText(props: {class?: string, children: JSXE}): JSXE {
     return <p class={`text-base lg:text-xl font-semibold ${props.class}`}>{props.children}</p>
+}
+
+export function Submit(props: {class?: string}): JSXE {
+    const [date, setDate] = createSignal(moment().unix());
+    const [result, setResult] = createSignal("");
+    const timer = setInterval(() => {setDate(date()+1)}, 1000);
+    onCleanup(() => clearInterval(timer))
+    createEffect(()=>{dateStringEvent(date, result, setResult)})
+    return (
+        <Tooltip>
+            <TooltipTrigger asChild>
+                <As component={Button} disabled={date() < startDate.unix() || date() > endDate.unix()} class={`text-xs md:text-base ${props.class === undefined ? "" : props.class}`}>
+                    신청
+                </As>
+            </TooltipTrigger>
+            <TooltipContent>
+                {result()}
+            </TooltipContent>
+        </Tooltip>
+    );
 }

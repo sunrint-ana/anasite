@@ -1,41 +1,17 @@
 import { ColorModeProvider, ColorModeScript } from "@kobalte/core";
 import { Col, Grid } from "./components/ui/grid";
-import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "./components/ui/card";
+import { Card, CardContent, CardHeader, CardTitle } from "./components/ui/card";
 import { createEffect, createSignal, onCleanup } from "solid-js";
-import moment, { Moment } from "moment";
-import { subtractDate } from "./definition";
+import moment from "dayjs";
+import { dateStringEvent } from "./definition";
 import { Button } from "./components/ui/button";
-import { BoldText, SubTitle, Title } from "./components/utils";
+import { BoldText, SubTitle, Submit, Title } from "./components/utils";
 
 export default function About() {
   const [date, setDate] = createSignal(moment().unix());
   const [result, setResult] = createSignal("");
-  const startDate = moment.unix(1710082800);
-  const endDate = moment.unix(1710428400);
   const timer = setInterval(() => {setDate(date()+1)}, 1000);
-  createEffect(()=>{
-    const ctime = moment.unix(date());
-    let s: Moment;
-    let dateString: string;
-    if (ctime.isAfter(startDate)) {
-      if (ctime.isAfter(endDate)) {
-        dateString = "지원 종료";
-        setResult(dateString);
-        return;
-      } else {
-        dateString = "지원 종료까지";
-        s = subtractDate(ctime, endDate);
-      }
-    } else {
-      dateString = "지원 모집까지";
-      s = subtractDate(ctime, startDate);
-    }
-    dateString += ` ${s.date()+(s.month()*29)}일 ${s.hour()}시간 ${s.minute()}분 ${s.second()}초 남음`;
-
-    if (dateString !== result()) {
-      setResult(dateString);
-    }
-  })
+  createEffect(()=>{dateStringEvent(date, result, setResult)})
   onCleanup(() => clearInterval(timer))
   return (
     <div>
@@ -91,7 +67,7 @@ export default function About() {
                   </CardHeader>
                   <CardContent class="flex flex-col items-center">
                     <p class="text-xl font-se tabular-nums">{result()}</p>
-                    <Button class="text-xs md:text-base mt-4">신청</Button>
+                    <Submit class="mt-4" />
                   </CardContent>
                 </Card>
               </Col>
