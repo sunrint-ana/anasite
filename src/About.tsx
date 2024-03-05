@@ -4,7 +4,6 @@ import { Card, CardContent, CardHeader, CardTitle } from "./components/ui/card";
 import { createEffect, createSignal, onCleanup } from "solid-js";
 import moment from "dayjs";
 import { dateStringEvent } from "./definition";
-import { Button } from "./components/ui/button";
 import { BoldText, SubTitle, Submit, Title } from "./components/utils";
 
 export default function About() {
