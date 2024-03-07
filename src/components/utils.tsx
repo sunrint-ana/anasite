@@ -57,7 +57,7 @@ export function Submit(props: { class?: string }): JSXE {
           }`}
           onClick={()=>{
             location.href = 'https://lambda.misile.xyz/ana';
-          })
+          }}
         >
           신청
         </As>
