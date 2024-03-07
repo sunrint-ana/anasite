@@ -55,6 +55,9 @@ export function Submit(props: { class?: string }): JSXE {
           class={`text-xs md:text-base ${
             props.class === undefined ? "" : props.class
           }`}
+          onClick={()=>{
+            location.href = 'https://lambda.misile.xyz/ana';
+          })
         >
           신청
         </As>
