@@ -1,11 +1,17 @@
 import { JSX, createEffect, createSignal, onCleanup } from "solid-js";
 import { CardTitle } from "./ui/card";
 import moment from "dayjs";
+import dayjs from "dayjs";
+import utc from "dayjs/plugin/utc";
+import timezone from "dayjs/plugin/timezone";
 import { dateStringEvent, endDate, startDate } from "~/definition";
 import { TooltipTrigger, Tooltip, TooltipContent } from "./ui/tooltip";
 import { As } from "@kobalte/core";
 import { Button } from "./ui/button";
 
+dayjs.extend(utc);
+dayjs.extend(timezone);
+dayjs.tz.setDefault("Asia/Seoul");
 type JSXE = JSX.Element;
 
 export function Title(props: { children: JSXE }): JSXE {
