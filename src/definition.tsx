@@ -5,7 +5,7 @@ import { Accessor, Setter } from "solid-js";
 export type Moment = moment.Dayjs;
 
 export const startDate = moment.unix(1709823600);
-export const endDate = moment.unix(1710428400);
+export const endDate = moment.unix(1710514800);
 
 export function revt(t: ColorMode): ColorMode {
   if (t == "dark") {
