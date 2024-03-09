@@ -1,6 +1,6 @@
 import { ColorModeProvider, ColorModeScript } from "@kobalte/core";
 import { Col, Grid } from "./components/ui/grid";
-import { Card, CardContent, CardHeader, CardTitle } from "./components/ui/card";
+import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "./components/ui/card";
 import { createEffect, createSignal, onCleanup } from "solid-js";
 import moment from "dayjs";
 import { dateStringEvent } from "./definition";
@@ -60,9 +60,14 @@ export default function About() {
                     <CardTitle class="text-3xl text-center">AnA 신청 기간</CardTitle>
                   </CardHeader>
                   <CardContent class="flex flex-col items-center">
-                    <p class="text-xl font-se tabular-nums">{result()}</p>
+                    <p class="text-base sm:text-xl font-se tabular-nums">{result()}</p>
                     <Submit class="mt-4" />
                   </CardContent>
+                  <CardFooter class="flex lg:flex-row flex-col justify-center items-center gap-1 text-gray-400 text-base md:text-xl">
+                    <p>다른 소프트웨어과 전공 동아리에</p>
+                    <p>중복 지원하지 않았음을 확인했으며,</p>
+                    <p>이로 인한 불이익은 자신에게 책임이 있습니다.</p>
+                  </CardFooter>
                 </Card>
               </Col>
             </Grid>
