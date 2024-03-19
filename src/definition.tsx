@@ -8,8 +8,8 @@ dayjs.extend(duration);
 
 export type Moment = moment.Dayjs;
 
-export const startDate = moment.unix(1709823600);
-export const endDate = moment.unix(1710507600);
+export const startDate = moment.unix(1710859779);
+export const endDate = moment.unix(1711119600);
 
 export function revt(t: ColorMode): ColorMode {
   if (t == "dark") {

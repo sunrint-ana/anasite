@@ -62,7 +62,7 @@ export function Submit(props: { class?: string }): JSXE {
             props.class === undefined ? "" : props.class
           }`}
           onClick={()=>{
-            location.href = 'https://lambda.misile.xyz/ana';
+            location.href = 'https://forms.gle/7hbmHvax8Qebx8vZ7';
           }}
         >
           신청
