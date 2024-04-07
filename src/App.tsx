@@ -1,6 +1,5 @@
 import { type Component } from 'solid-js';
 import { ColorModeProvider, ColorModeScript} from '@kobalte/core';
-import NavBar from './components/navbar';
 import About from './About';
 
 const App: Component = () => {
@@ -9,7 +8,6 @@ const App: Component = () => {
       <ColorModeScript />
       <ColorModeProvider>
         <div class="h-screen flex flex-col">
-          <NavBar/>
           <div class="flex flex-grow justify-center">
             <div class="flex flex-col justify-center mb-20 items-center">
               <img src="/logo.svg" alt="AnA" width={200} />

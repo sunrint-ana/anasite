@@ -4,7 +4,7 @@ import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "./componen
 import { createEffect, createSignal, onCleanup } from "solid-js";
 import moment from "dayjs";
 import { dateStringEvent } from "./definition";
-import { BoldText, SubTitle, Submit, Title } from "./components/utils";
+import { BoldText, SubTitle, /* Submit, */ Title } from "./components/utils";
 
 export default function About() {
   const [date, setDate] = createSignal(moment().unix());
@@ -54,7 +54,7 @@ export default function About() {
                   <BoldText>AnA는 프로그램이 아이디어로 완성된다고 생각합니다.</BoldText>
                 </CardContent>
               </Card>
-              <Col span={1} spanMd={2} class="mb-20 w-full">
+              {/*<Col span={1} spanMd={2} class="mb-20 w-full">
                 <Card class="h-fit">
                   <CardHeader>
                     <CardTitle class="text-3xl text-center">AnA 신청 기간</CardTitle>
@@ -69,7 +69,7 @@ export default function About() {
                     <p>이로 인한 불이익은 자신에게 책임이 있습니다.</p>
                   </CardFooter>
                 </Card>
-              </Col>
+              </Col>*/}
             </Grid>
           </div>
         </div>

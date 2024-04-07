@@ -42,7 +42,7 @@ export function BoldText(props: { class?: string; children: JSXE }): JSXE {
   );
 }
 
-export function Submit(props: { class?: string }): JSXE {
+/* export function Submit(props: { class?: string }): JSXE {
   const [date, setDate] = createSignal(moment().unix());
   const [result, setResult] = createSignal("");
   const timer = setInterval(() => {
@@ -71,4 +71,4 @@ export function Submit(props: { class?: string }): JSXE {
       <TooltipContent>{result()}</TooltipContent>
     </Tooltip>
   );
-}
+}*/
